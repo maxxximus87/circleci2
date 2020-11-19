@@ -1,11 +1,10 @@
 import hello_world
 import unittest
-import flask_circleci
 
 class TestHelloWorld(unittest.TestCase):
 
     def setUp(self):
-        self.app = flask_circleci.app.test_client()
+        self.app = hello_world.app.test_client()
         self.app.testing = True
 
     def test_status_code(self):
